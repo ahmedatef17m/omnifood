@@ -3,6 +3,13 @@ const navEl=document.querySelector('.btn-mobile-nav')
 navEl.addEventListener('click',function(){
 header.classList.toggle('nav-open');
 })
+const navlinks=document.querySelectorAll('.main-nav-link');
+navlinks.forEach(link =>
+  link.addEventListener('click', function () {
+header.classList.remove('nav-open');
+  }))
+
+
 // sticy
 const sectionheroEl=document.querySelector(".section-hero");
 const obs=new IntersectionObserver(function(entries){
